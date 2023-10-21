@@ -1,6 +1,6 @@
 import React, {useCallback, useState} from 'react'
 import { signInWithEmailAndPassword, getAuth} from 'firebase/auth'
-//import firebaseApp from '../..services/firebase'
+import firebaseApp from '../../services/firebase'
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -15,23 +15,25 @@ function Login() {
               getAuth(firebaseApp),
               email,
               password
-              
             )
         })();   
       }
+
   }, [email, password])
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
+    <div className='min-h-screen flex items-center justify-center bg-red-100'>
+      <form onSubmit={handleLogin} className='w-96 space-y-4 bg-red-300'>
       <input 
       onChange={e => setEmail(e.target.value)} 
-      value={email} type="email" 
+      value={email} 
+      type="email" 
       placeholder='Please provide email' />
 
       <input 
       onChange={e => setpassword(e.target.value)} 
-      value={password} type='password' 
+      value={password} 
+      type='password' 
       placeholder='Please enter password' />
 
       <button>Login</button>
