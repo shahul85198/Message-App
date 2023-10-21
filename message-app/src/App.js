@@ -8,10 +8,10 @@ function App() {
   return (
 
     <Layout>
-      
+      Chat App
        <Signup />
-
-       
+    
+       <hr />   
 
        <Login />
     </Layout>
