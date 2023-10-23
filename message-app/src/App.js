@@ -1,20 +1,19 @@
 
 import './App.css';
-import Layout from './components/Layout'
-import Login from './components/Auth/Login';
-import Signup from './components/Auth/Signup';
+
+import { AuthProvider } from './context/AuthContext';
+import Header from './components/Layout/Header'
+import AppRouter from './components/Router';
 
 function App() {
   return (
-
-    <Layout>
-      Chat App
-       <Signup />
-    
-       <hr />   
-
-       <Login />
-    </Layout>
+    <AuthProvider>
+      <main>
+        <Header />
+       <AppRouter />
+       
+      </main>
+    </AuthProvider>
 
   );
 }
