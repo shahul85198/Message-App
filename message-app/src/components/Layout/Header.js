@@ -3,6 +3,7 @@ import PageLinks from "../common/PageLink";
 import { AuthContext } from "../../context/AuthContext";
 import { getAuth, signOut } from "firebase/auth"
 import firebaseApp from "../../services/firebase";
+import ModalPopUp from "../Chat/ModalPopUp";
 
 var Header = () => {
   const { user } = useContext(AuthContext);
@@ -21,6 +22,8 @@ var Header = () => {
       <nav className="flex gap-4">
         <PageLinks to="/">Home</PageLinks>
         {user ? <>
+        <ModalPopUp />
+        <p>{user.email}</p>
           <PageLinks to="/" onClick={logout}>Logout</PageLinks>
         </> : <>
           <PageLinks to="/login">Login</PageLinks>
