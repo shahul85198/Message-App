@@ -2,7 +2,6 @@ import React, { createContext, useContext, useState } from 'react'
 import { firebaseDB } from '../services/firebase';
 import { addDoc, collection, getDocs } from 'firebase/firestore';
 
-
 export const RoomContext = createContext({});
 
 export function RoomProvider({children}) {
@@ -49,3 +48,5 @@ export function RoomProvider({children}) {
 }
 
 export const useRooms = () => useContext(RoomContext);
+
+
