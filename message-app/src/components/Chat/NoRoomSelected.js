@@ -1,4 +1,4 @@
-import React from '.react';
+import React from 'react';
 import { useRooms } from '../../context/RoomContext';
 import {LoadingOutlined} from '@ant-design/icons'
 

@@ -11,7 +11,7 @@ var AppRouter = () => {
                 <Route exact path='/' component = {Home} />
                 <Route path='/signup' component = {Signup} />
                 <Route path='/login' component = {Login} />
-                <Route path='/xhat-room' component = {ChatRoom} />
+                <Route path='/chat-room' component = {ChatRoom} />
             </Switch>
         </div>
     )
