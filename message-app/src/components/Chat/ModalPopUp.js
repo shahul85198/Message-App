@@ -1,6 +1,6 @@
 import PageLink from '../Navigation/PageLink'
 import {Modal, Input, Button} from 'antd';
-import {useAuth} from '../../contexts/AuthContext';
+import {useAuth} from '../../context/AuthContext';
 import { useRooms } from '../../context/RoomContext';
 import { useEffect, useState } from 'react';
 

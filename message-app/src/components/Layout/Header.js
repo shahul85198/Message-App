@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import PageLinks from "../common/PageLink";
+import PageLinks from "../Navigation/PageLink";
 import { AuthContext } from "../../context/AuthContext";
 import { getAuth, signOut } from "firebase/auth"
 import firebaseApp from "../../services/firebase";
