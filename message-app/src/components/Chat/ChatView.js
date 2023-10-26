@@ -11,11 +11,10 @@ function ChatView() {
         return "Display Message";
       }
 
-  return (
-    <section className='flex-1 p-4'>
+  return <section className='flex-1 p-4'>
         {selectedRoom ? <RoomInvitation room={selectedRoom} onClick={() => joinRoom(selectedRoom)} /> : <NoRoomSelected />}
     </section>
-  )
+  
 }
 
 export default React.memo(ChatView);

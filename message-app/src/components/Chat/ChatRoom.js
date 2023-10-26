@@ -2,6 +2,7 @@ import React from 'react';
 import { useRooms } from '../../context/RoomContext';
 import ChatView from './ChatView';
 import RoomList from './RoomList';
+import { useAuth } from '../../context/AuthContext';
 
 
 
@@ -20,6 +21,8 @@ var  ChatRoom = () => {
             isJoined: (room.users || []).includes(user.uid)
         }
     })
+
+    var HandleLoading = () => <p className='text-2xl flex justify-center mt-56'>Loding...</p>
 
 
     return <div className='flex h-screen'>

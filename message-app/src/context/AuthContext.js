@@ -13,6 +13,7 @@ export function AuthProvider({ children }) {
             getAuth(firebaseApp),
             (user) => {
                 setCurrentUser(user);
+                console.log(":: FIREBASE USER ::", user)
             }
         )
         return unsubscribe;
