@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useHistory } from "react-router-dom";
+import Button from "../Button";
 
 
 
@@ -19,20 +20,18 @@ var Home = () => {
 
 
   return <div className="HomePageUI">
-      <section className="HomePageSection">
-      <h1 className="text-center text-6xl text-slate-900 mb-6">Chit-Chat</h1>
-      <p className="text-center text-2xl text-slate-900">
+      <section className="HomePageSection text-center">
+      <h1 className="text-6xl text-slate-900 mb-6">Chit-Chat</h1>
+      <p className="text-2xl text-slate-900">
         Have Your Best Chat
       </p>
-      <p className="text-center text-lg text-slate-900">
+      <p className="text-lg text-slate-900 mb-4">
         Fast Easy And Unlimites Team Chat
       </p>
-      <button 
-        className="w-40 rounded p-2 bg-slate-900 text-white ml-24 mt-4 hover:bg-slate-800"
-        onClick={handleonclick}
-          > 
+      <Button onClick={handleonclick} className='w-40'> 
         Get Started
-      </button>
+      </Button>
+      
       </section>
 
   </div>;
